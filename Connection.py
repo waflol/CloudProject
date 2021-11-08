@@ -46,9 +46,8 @@ def telemetry(sid, data):
         sendBack_angle = 0
         sendBack_Speed = 50
         # ------------------------------------------  Work space  ----------------------------------------------#
-        # ['car','pedestrian','road','roadcone','roadline','trafficsign']
         cv2.waitKey(1)
-
+        
 
         print('toc do nap len {} : {}'.format(sendBack_angle, sendBack_Speed))
         print('van toc tra ve {} : {}'.format(steering_angle, speed_callback))
