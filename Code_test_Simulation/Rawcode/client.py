@@ -11,11 +11,11 @@ import numpy as np
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
 
 # Define the port on which you want to connect 
-port = 54321                
-  
+#port = 54321                
+port = 8080
 # connect to the server on local computer 
 s.connect(('127.0.0.1', port)) 
-
+#s.connect(('http://localhost:8080/'))
 pre = time.time()
 
 angle = 50
