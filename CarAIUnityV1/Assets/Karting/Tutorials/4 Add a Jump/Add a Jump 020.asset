@@ -27,15 +27,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd3e7c665e4144f519b7ee9de726ea5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PrefabParent: {fileID: 3532500723291440203, guid: db0af21853ba047fda7b6e30b74ffedf,
-    type: 3}
+  m_PrefabParent: {fileID: 3532500723291440203, guid: db0af21853ba047fda7b6e30b74ffedf, type: 3}
   m_FuturePrefabInstances:
     m_Items:
-    - m_PrefabParent: {fileID: 3532500723291440203, guid: db0af21853ba047fda7b6e30b74ffedf,
-        type: 3}
+    - m_PrefabParent: {fileID: 3532500723291440203, guid: db0af21853ba047fda7b6e30b74ffedf, type: 3}
       m_FutureReference: {fileID: 2682332862291207196}
-    - m_PrefabParent: {fileID: 531054675660519000, guid: db0af21853ba047fda7b6e30b74ffedf,
-        type: 3}
+    - m_PrefabParent: {fileID: 531054675660519000, guid: db0af21853ba047fda7b6e30b74ffedf, type: 3}
       m_FutureReference: {fileID: -8597836043178199937}
 --- !u!114 &11400000
 MonoBehaviour:

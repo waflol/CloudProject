@@ -169,3 +169,4 @@ Cmd: compileComputeKernel
 
 Cmd: initializeCompiler
 
+Cmd: shutdown
