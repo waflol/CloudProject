@@ -44,7 +44,7 @@ Simple training
 - B5: Training
 .. code:: bash
 
-   $ mlagents-learn config.yaml --run-id="test" --env=$env_path --no-graphics
+   $ mlagents-learn <path-to-config>/config.yaml --run-id="test" --env=$env_path --no-graphics
 
 Simple training on unity editor
 ~~~~~~~~~~~~~
@@ -54,7 +54,7 @@ Simple training on unity editor
 - B4: Chạy đoạn code dưới để training
 .. code:: bash
 
-   $ mlagents-learn config.yaml --run-id="test" --env=$env_path --no-graphics
+   $ mlagents-learn <path-to-config>/config.yaml --run-id="test" --env=$env_path --no-graphics
 - B5: Nhấn nút play trên unity editor và quan sát
 
 Test on unity editor
