@@ -1,5 +1,6 @@
 ﻿using KartGame.KartSystems;
 using Unity.MLAgents;
+using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -57,9 +58,9 @@ namespace KartGame.AI
         [Tooltip("Would the agent need a custom transform to be able to raycast and hit the track? " +
             "If not assigned, then the root transform will be used.")]
         public Transform AgentSensorTransform;
-#endregion
+        #endregion
 
-#region Rewards
+        #region Rewards
         [Header("Rewards"), Tooltip("What penatly is given when the agent crashes?")]
         public float HitPenalty = -1f;
         [Tooltip("How much reward is given when the agent successfully passes the checkpoints?")]
@@ -239,8 +240,9 @@ namespace KartGame.AI
             sensor.AddObservation(m_Acceleration);
         }
 
-        public override void OnActionReceived(float[] vectorAction)
+        public override void OnActionReceived(ActionBuffers vectorAction)
         {
+
             base.OnActionReceived(vectorAction);
             InterpretDiscreteActions(vectorAction);
 
@@ -256,6 +258,7 @@ namespace KartGame.AI
             AddReward(reward * TowardsCheckpointReward);
             AddReward((m_Acceleration && !m_Brake ? 1.0f : 0.0f) * AccelerationReward);
             AddReward(m_Kart.LocalSpeed() * SpeedReward);
+            //m_Kart.MoveVehicle(m_Acceleration, m_Brake, m_Steering);
         }
 
         public override void OnEpisodeBegin()
@@ -277,13 +280,37 @@ namespace KartGame.AI
             }
         }
 
-        void InterpretDiscreteActions(float[] actions)
+        void InterpretDiscreteActions(ActionBuffers actions)
         {
-            m_Steering = actions[0] - 1f;
-            m_Acceleration = actions[1] >= 1.0f;
-            m_Brake = actions[1] < 1.0f;
+            //var action = actions.DiscreteActions;
+            var action = actions.DiscreteActions;
+            //m_Steering = action[0] - 1f;
+            m_Steering = action[0]-1f;
+            m_Acceleration = action[1] >= 1f;
+            m_Brake = action[1] < 1f;
         }
-
+        public override void Heuristic(in ActionBuffers actionsOut)
+        {
+            var action = actionsOut.ContinuousActions;
+            action[0] = Input.GetAxis("Horizontal");
+            action[1] = Input.GetKey(KeyCode.W) ? 1f : 0f; 
+        }
+        //public override void Heuristic(in ActionBuffers actionsOut)
+        //{
+        //    var action = actionsOut.DiscreteActions;
+        //    int forwardAction = 0;
+        //    int turnAction = 0;
+        //    if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) forwardAction = 1;
+        //    if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) forwardAction = 2;
+        //    if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) forwardAction = 1;
+        //    if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) forwardAction = 2;
+        //    action[0] = forwardAction;
+        //    action[1] = turnAction;
+        //    //m_Steering = action[0] - 1f;
+        //    //m_Acceleration = action[1] > 1.0f;
+        //    //m_Brake = action[1] < 1.0f;
+        //    //m_Kart.MoveVehicle(m_Acceleration, m_Brake, m_Steering);
+        //}
         public InputData GenerateInput()
         {
             return new InputData

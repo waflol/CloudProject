@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Karting/Scenes/MLTraining/Train_map/TrainingD.unity
+    guid: 8dd48e86c846dff4dbd979d3306cf19c
   m_configObjects: {}

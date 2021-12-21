@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Karting/Scenes/MLTraining/Training.unity
+- path: Assets/Karting/Scenes/MLTraining/Test_map/Testing.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
