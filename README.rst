@@ -1,4 +1,3 @@
-# CloudProject
 .. raw:: html
 Table of Contents
 ~~~~~~~~~~~~~~~~~
