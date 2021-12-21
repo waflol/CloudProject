@@ -13,4 +13,4 @@ Table of Contents
 Documentation
 ~~~~~~~~~~~~~
 Latest **documentation** is avaliable on `Read the
-Docs <https://segmentation-models.readthedocs.io/en/latest/>`__
+Docs <https://github.com/Unity-Technologies/ml-agents/tree/release_18>`__
