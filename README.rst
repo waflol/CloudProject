@@ -1,4 +1,9 @@
 .. raw:: html
+**Important note**
+
+    Các thư mục com.unity.learn.iet-framework-master và ml-agents-release_18 là các thư mục kèm theo bắt buộc phải cài đặt (các gói phụ thuộc như hình dưới)
+ 
+.. image:: https://github.com/waflol/CloudProject/blob/main/images/1.png
 
 Table of Contents
 ~~~~~~~~~~~~~~~~~
