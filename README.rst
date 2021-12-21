@@ -53,6 +53,7 @@ Simple training on unity editor
 ~~~~~~~~~~~~~
 - B1: Cài unity hub, unity editor và git clone project này về
 - B2: Vào unity hub, chọn add chọn thư mục CarAIUnityV1 trong project và cái các gói phụ thuộc nếu có yêu cầu ( có sẵn mlagents và iet-framework-master trong project)
+- (Optional-nếu làm B2 rồi thì bỏ qua): Tạo new project, xong vào Assets > Import Package > Custom Package, xong chọn file Map_projectDEV.unitypackage và cài đặt các gói phụ thuộc
 - B3: cài đặt mlagents và mlagents-envs
 
 .. code:: bash
