@@ -9,7 +9,7 @@ Table of Contents
  - `Documentation`_
 Set up environments
 ~~~~~~~~~~~~~
-Yêu cầu: Python 3
+Yêu cầu: Python 3, pip và git
 
 - B1: clone project mlagents
 
