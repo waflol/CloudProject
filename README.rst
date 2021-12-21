@@ -49,7 +49,7 @@ Simple training
 Simple training on unity editor
 ~~~~~~~~~~~~~
 - B1: Cài unity hub, unity editor và git clone project này về
-- B2: Vào unity hub, chọn add chọn thư mục CarAIUnityV1 trong project và cái các gói phụ thuộc ( có sẵn mlagents và iet-framework-master trong project)
+- B2: Vào unity hub, chọn add chọn thư mục CarAIUnityV1 trong project và cái các gói phụ thuộc nếu có yêu cầu ( có sẵn mlagents và iet-framework-master trong project)
 - B3: tạo file config.yaml
 - B4: Chạy đoạn code dưới để training
 .. code:: bash
