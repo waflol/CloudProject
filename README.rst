@@ -40,6 +40,11 @@ Simple training
 ~~~~~~~~~~~~~
 - B1: tạo file config.yaml. `Exmaple <https://github.com/waflol/Map_Demo/blob/main/config.yaml>`__
 - B2: cung cấp quyển cho các file *.x86_64 và UnityPlayer.so trong Map_Demo
+.. code:: bash
+
+   $ chmod -R 755 <path-to-Map_Demo>/Map_Demo/TrainingA/linux/TrainingA.x86_64
+   $ chmod -R 755 <path-to-Map_Demo>/Map_Demo/TrainingA/linux/UnityPlayer.so
+   
 - B3: Tạo biến env_path dẫn tới file *.x86_64
 - B5: Training
 .. code:: bash
